@@ -59,7 +59,7 @@ cmd(
 ┃
 ┃ *ʜɪ*  ${pushname} *ɪ'ᴍ ᴀʟɪᴠᴇ* 
 ┃
-┃⦁✅ *ʀᴜɴᴛɪᴍᴇ*: ${runtime(process.uptime())}
+┃⦁❤️ *ʀᴜɴᴛɪᴍᴇ*: ${runtime(process.uptime())}
 ┃⦁🖥️ *ʀᴀᴍ* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB / ${Math.round(os.totalmem() / 1024 / 1024)} MB
 ┃ *⦁👩‍💻ᴄʀᴇᴀᴛᴏʀ* : Nethindu, Jithula
 ┃⦁🤝 *ᴏᴡɴᴇʀ* : ${config.OWNER}
@@ -101,7 +101,7 @@ cmd(
 ┃
 ┃ *ʜɪ*  ${pushname} *ɪ'ᴍ ʀᴇᴅʏ ᴛᴏ ʜᴜᴍᴛ 😈* 
 ┃
-┃⦁✅ *ʀᴜɴᴛɪᴍᴇ*: ${runtime(process.uptime())}
+┃⦁⚜️*ʀᴜɴᴛɪᴍᴇ*: ${runtime(process.uptime())}
 ┃⦁🖥️ *ʀᴀᴍ* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB / ${Math.round(os.totalmem() / 1024 / 1024)} MB
 ┃ *⦁👩‍💻ᴄʀᴇᴀᴛᴏʀ* : Nethindu, Jithula
 ┃⦁🤝 *ᴏᴡɴᴇʀ* : ${config.OWNER}
