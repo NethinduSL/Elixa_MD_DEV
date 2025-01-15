@@ -367,7 +367,7 @@ cmd({
                 document: pdfBuffer.data, 
                 mimetype: 'application/pdf', 
                 fileName, 
-                caption: `PDF generated for: ${text}\nFile Name: ${fileName}\nSize: ${size_pretty}\.n> 𝗚𝗲𝟆𝗮𝗿𝗮𝐭𝗲𝙙 𝝗𝞤 𝗘ꟾ𝖎✘𝗮 ‐𝝡𝗗༺` 
+                caption: `PDF generated for: ${text}\nFile Name: ${fileName}\nSize: ${size_pretty}\n> 𝗚𝗲𝟆𝗮𝗿𝗮𝐭𝗲𝙙 𝝗𝞤 𝗘ꟾ𝖎✘𝗮 ‐𝝡𝗗༺` 
             }, 
             { quoted: mek }
         );
