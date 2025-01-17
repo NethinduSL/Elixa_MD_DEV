@@ -202,18 +202,18 @@ cmd({
 
 ╭𝗠𝗢𝗩𝗜𝗘 𝗠𝗘𝗡𝗨 ✅
 ┃
-┃.Movies  movie එකේ නම
+┃.Movies < movie එකේ නම>
 ┃eg .moviel iron man
 ┃
-┃.dl movies වලින් ගනිපු ඕන 
+┃.dl <movies වලින් ගනිපු ඕන >
 ┃movie එකේ link එක 
 ┃eg .dl https://sinhalasub.lk/movies/guardians-of-the-galaxy-2014-sinhala-subtitles/
 ┃
-┃.dll dl වලින් ගනිපු link වලින් ඕන
-┃ qulity එක තියෙන link එක
+┃.dll <dl වලින් ගනිපු link වලින් ඕන
+┃ qulity එක තියෙන link එක>
 ┃eg .dll https://sinhalasub.lk/links/nz1bvrdg5j/ 
 ┃
-┃.fit api url එක
+┃.fit <api url එක>
 ┃eg .fit https://pixeldrain.com/api/file/sagZ9i7i
 ┃
 ╰═══════════════
