@@ -27,7 +27,7 @@ cmd({
 
         for (let i = 0; i < commands.length; i++) {
             if (commands[i].pattern && !commands[i].dontAddCommandList) {
-                menu[commands[i].category] += `*.${commands[i].pattern}\n┃*`;
+                menu[commands[i].category] += `.${commands[i].pattern}\n┃`;
             }
         }
 
