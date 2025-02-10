@@ -58,26 +58,29 @@ cmd({
         try {
             
     const response = await axios.get(`https://bk9.fun/download/youtube2?url=${videoUrl}`);
-const { result } = response.data;
+const { BK9 } = response.data; // Access the BK9 array directly
 
-if (!result || !result.BK9 || !result.BK9.downloadUrl || result.BK9.downloadUrl.length < 3) {
+if (!BK9 || BK9.length === 0) {
     return;
 }
 
-const { downloadUrl, title } = result.BK9.downloadUrl[2];
+const { mediaLink, title } = BK9[0]; // Accessing the first object in the BK9 array
 
+// Sending audio message with mediaLink
 await conn.sendMessage(from, {
-    audio: { url: downloadUrl },
+    audio: { url: mediaLink },
     mimetype: "audio/mpeg",
     fileName: `${title}.mp3`
 }, { quoted: mek });
 
+// Sending document message with mediaLink
 await conn.sendMessage(from, {
-    document: { url: downloadUrl },
+    document: { url: mediaLink },
     mimetype: "audio/mpeg",
     fileName: `${title}.mp3`,
     caption: "𝗚𝗲𝟆𝗮𝗿𝗮𝐭𝗲𝙙 𝝗𝞤 𝗘ꟾ𝖎✘𝗮 ‐𝝡𝗗🔥"
 }, { quoted: mek });
+
 
 
             
