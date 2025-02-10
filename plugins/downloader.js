@@ -57,7 +57,7 @@ cmd({
 
         try {
             
-/*     const response = await axios.get(`https://bk9.fun/download/ytmp3?url=${videoUrl}`);
+    const response = await axios.get(`https://bk9.fun/download/youtube2?url=${videoUrl}`);
 const { result } = response.data;
 
 if (!result || !result.BK9 || !result.BK9.downloadUrl || result.BK9.downloadUrl.length < 3) {
@@ -85,7 +85,7 @@ await conn.sendMessage(from, {
             
         
     
-    const apiUrl = `https://api.giftedtech.my.id/api/download/ytmp3?apikey=gifted&url=${videoUrl}`;
+/*    const apiUrl = `https://api.giftedtech.my.id/api/download/ytmp3?apikey=gifted&url=${videoUrl}`;
             const response = await axios.get(apiUrl);
             const { result } = response.data;
     
@@ -109,7 +109,7 @@ await conn.sendMessage(from, {
                 caption: "𝗚𝗲𝟆𝗮𝗿𝗮𝐭𝗲𝙙 𝝗𝞤 𝗘ꟾ𝖎✘𝗮 ‐𝝡𝗗"
             }, { quoted: mek });
 
-*/
+
             const apiUrl = `https://api.giftedtech.my.id/api/download/dlmp3q?apikey=gifted&quality=128&url=${videoUrl}`;
             const response = await axios.get(apiUrl);
             const { result } = response.data;
@@ -135,7 +135,7 @@ await conn.sendMessage(from, {
             }, { quoted: mek });
 
 
-
+*/
         } catch (fallbackError) {
             console.error("Fallback method failed:", fallbackError.message);
             return reply(`Error: Both methods failed. Please try again later 🙃`);
