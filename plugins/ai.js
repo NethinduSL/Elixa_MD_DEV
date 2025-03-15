@@ -40,7 +40,7 @@ cmd({
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-        let data = await fetchJson(`https://bk9.fun/ai/GPT4o?q=${q}&userId=${senderNumber}`);
+        let data = await fetchJson(`https://bk9.fun/ai/gemini?q=${q}`);
         return reply(`${data.BK9}\n\n> 𝗚𝗲𝟆𝗮𝗿𝗮𝐭𝗲𝙙 𝝗𝞤 𝗘ꟾ𝖎✘𝗮 ‐𝝡𝗗༺`);
     } catch (e) {
         console.log(e);
