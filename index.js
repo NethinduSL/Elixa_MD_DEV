@@ -21,15 +21,15 @@ const prefix = '.';
 
 const ownerNumber = ['94766428832'];
 
-//╭─────────────────────Seson Auth──────────────────────╮//
+//â•­â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€Seson Authâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â•®//
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
     if (!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!');
-const sessdata = config.SESSION_ID.replace('ELIXAMD❤️', ''); // Remove 'ELIXA-MD' from SESSION_ID
+const sessdata = config.SESSION_ID.replace('ELIXAMDâ¤ï¸', ''); // Remove 'ELIXA-MD' from SESSION_ID
 const filer = File.fromURL(`https://mega.nz/file/${sessdata}`);
 filer.download((err, data) => {
     if (err) throw err;
     fs.writeFile(__dirname + '/auth_info_baileys/creds.json', data, () => {
-        console.log("Session downloaded ✅");
+        console.log("Session downloaded âœ…");
     });
 });
 
@@ -39,10 +39,10 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 8000;
 
-//╰────────────────────────────────────────────────╯//
+//â•°â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â•¯//
 
 async function connectToWA() {
-    console.log("Connecting wa bot 🕦...");
+    console.log("Connecting wa bot ðŸ•¦...");
     const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/');
     const { version } = await fetchLatestBaileysVersion();
 
@@ -62,18 +62,18 @@ async function connectToWA() {
                 connectToWA();
             }
         } else if (connection === 'open') {
-            console.log('🕦Installing...');
+            console.log('ðŸ•¦Installing...');
             const path = require('path');
             fs.readdirSync("./plugins/").forEach((plugin) => {
                 if (path.extname(plugin).toLowerCase() === ".js") {
                     require("./plugins/" + plugin);
                 }
             });
-            console.log('Plugins installed successfully ✅');
-            console.log('Bot connected to WhatsApp ✅');
-             console.log(' 𝗚𝗲𝟆𝗮𝗿𝗮𝐭𝗲𝙙 𝝗𝞤 𝗘ꟾ𝖎✘𝗮 ‐𝝡𝗗༺');   
+            console.log('Plugins installed successfully âœ…');
+            console.log('Bot connected to WhatsApp âœ…');
+             console.log(' ð—šð—²ðŸ†ð—®ð—¿ð—®ð­ð—²ð™™ ð—ðž¤ ð—˜êŸ¾ð–Žâœ˜ð—® â€ð¡ð——à¼º');   
 
-            let up = `Elixa MDconnected successfully ✅\n\nPREFIX: ${prefix} \n ❤️🇱🇰Form Nethindu Thaminda \n > 𝗚𝗲𝟆𝗮𝗿𝗮𝐭𝗲𝙙 𝝗𝞤 𝗘ꟾ𝖎✘𝗮 ‐𝝡𝗗༺`;
+            let up = `Elixa MDconnected successfully âœ…\n\nPREFIX: ${prefix} \n â¤ï¸ðŸ‡±ðŸ‡°Form Nethindu Thaminda \n > ð—šð—²ðŸ†ð—®ð—¿ð—®ð­ð—²ð™™ ð—ðž¤ ð—˜êŸ¾ð–Žâœ˜ð—® â€ð¡ð——à¼º`;
             conn.sendMessage(ownerNumber[0] + "@s.whatsapp.net", { image: { url: `https://raw.githubusercontent.com/Eboxsl/ELAUTO/refs/heads/main/Elixa/connect.png` }, caption: up });
         }
     });
@@ -84,7 +84,9 @@ async function connectToWA() {
         mek = mek.messages[0];
         if (!mek.message) return;
         mek.message = (getContentType(mek.message) === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message;
-        if (mek.key && mek.key.remoteJid === 'status@broadcast') return;
+        if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_READ_STATUS  === "true") {
+            await conn.readMessages([mek.key])
+            }
 
         const m = sms(conn, mek);
         const type = getContentType(mek.message);
